@@ -1,0 +1,25 @@
+{
+  "name": "k-virtual-dom",
+  "version": "1.0.0",
+  "description": "virtual-dom learnning",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/keifergu/k-virtual-dom.git"
+  },
+  "keywords": [
+    "virtual-dom"
+  ],
+  "author": "Keifer Gu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/keifergu/k-virtual-dom/issues"
+  },
+  "homepage": "https://github.com/keifergu/k-virtual-dom#readme",
+  "dependencies": {
+    "webpack": "^1.13.3"
+  }
+}
