@@ -1,7 +1,20 @@
 var Element = function (tagName, props, children) {
 	this.tagName = tagName;
 	this.props = props;
-	this.children = children;
+	this.children = children || [];
+
+	var count = 0
+
+	this.children.forEach(function (child, i) {
+	  if (child instanceof Element) {
+	    count += child.count;
+	  } else {
+	    children[i] = '' + child;
+	  }
+	  count++;
+	});
+
+	this.count = count;
 };
 
 

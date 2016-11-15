@@ -4,7 +4,8 @@
   "description": "virtual-dom learnning",
   "main": "index.js",
   "scripts": {
-    "test": "npm test"
+    "test": "npm test",
+    "dev": "webpack-dev-server --inline --hot"
   },
   "repository": {
     "type": "git",
