@@ -16,15 +16,14 @@ function dfsWalk(oldNode, newNode, index, patches) {
 	// 
 	if (newNode === null) {
 
-	} else if (typeof oldNode == String && typeof newNode == String) {
+	} else if (typeof oldNode == 'string' && typeof newNode == 'string') {
 		// 
 		if (newNode !== oldNode) {
 			currentPatch.push({type: TEXT, content: newNode});
 		}
 	} else if (
 			oldNode.tagName === newNode.tagName &&
-			oldNode.key === newNode.key
-		) {
+			oldNode.key === newNode.key) {
 
 		var propsPatches = diffProps(oldNode, newNode);
 		if (propsPatches) {
@@ -59,7 +58,7 @@ function diffChildren(oldChildren, newChildren, index, patches, currentPatch) {
 			// 前面的 node 不存在或者为字符串
 			: currentNodeIndex + 1;
 		dfsWalk(child, newChild, currentNodeIndex, patches);
-
+		allLeftNode = child;
 	})
 }
 
@@ -92,3 +91,5 @@ function diffProps(oldNode, newNode) {
 	}
 	return propsPatches;
 }
+
+module.exports = diff;
